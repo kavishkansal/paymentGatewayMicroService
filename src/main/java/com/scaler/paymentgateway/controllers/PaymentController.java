@@ -21,4 +21,10 @@ public class PaymentController {
     public String createPaymentLink(@RequestBody CreatePaymentLinkRequestDto request){
         return paymentService.createPaymentLink(request.getOrderId());
     }
+
+    @PostMapping("/webhook")
+    public String handleWebhook(@RequestBody String payload){
+        System.out.println("WebHook Triggered " + payload);
+        return "OK";
+    }
 }

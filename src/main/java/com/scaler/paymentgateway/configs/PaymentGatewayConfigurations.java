@@ -19,4 +19,6 @@ public class PaymentGatewayConfigurations {
     RazorpayClient createRazorpayClient() throws RazorpayException {
         return new RazorpayClient(razorpaykeyId, razorpaykeySecret);
     }
+
+
 }
